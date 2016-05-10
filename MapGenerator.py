@@ -144,8 +144,14 @@ def move():
         playerYPos += 1
     print("you are in room", playerXPos, ",", playerYPos)
     
-print("balls")
+# Game start
+
+print(game.roomList)
+
 move()
+
+
+
 #top = tkinter.Tk() 
 #c = tkinter.Canvas(top, bg = "blue", height=480, width=640, cursor = "dot")        
 #coord = 10, 50, 240, 210
