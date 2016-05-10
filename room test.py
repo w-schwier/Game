@@ -40,9 +40,9 @@ class room:
         self.upper = upper
         self.event = event
         self.omen = omen
-        self.item = item 
+        self.item = item
         self.comments = comments
-        
+
     def getRoom():
         count = 0
         while count <= len(game.roomList):
@@ -77,8 +77,8 @@ class room:
                 return "true"
         if direction == "west":
             if self.wDoor == "true":
-                return true
-        return "false"
+                return "true"
+        
 
             
 
@@ -132,7 +132,8 @@ def getInput(prompt, rejectedText, accecpted):
     
 
 def move():
-    print("You are in room", playerXPos, ",", playerYPos)
+    print("You are in room ", "(", playerXPos, ",", playerYPos, ")")
+    # put in print(room.roomName) or some such shit
     room.roomInfo(room.getRoom())
     direction = getInput("Which door do you take? ", "That's not a compass point and you know it!", ["north", "south", "east", "west"])
     print(direction)
@@ -144,7 +145,7 @@ def move():
         playerYPos += 1
     print("you are in room", playerXPos, ",", playerYPos)
     
-print("balls")
+
 move()
 #top = tkinter.Tk() 
 #c = tkinter.Canvas(top, bg = "blue", height=480, width=640, cursor = "dot")        
@@ -153,4 +154,3 @@ move()
 #c.pack()
 #balls2 = c.create_oval(200, 300, 100, 50, fill ="orange")
 #c.update()
-#extra tits 
